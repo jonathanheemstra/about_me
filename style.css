@@ -1,4 +1,38 @@
 body {
   margin: 0 auto;
   max-width: 1080px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.about_me {
+  width: 73%;
+  float: left;
+}
+.personality_type {
+  width: 22%;
+  float: left;
+  margin: 0% 0% 0% 5%;
+  background-color: #E74C3C;
+  color: white;
+}
+.personality_type * {
+  margin-left: 5%;
+}
+.score {
+  clear: both;
+  text-align: center;
+}
+.user_score {
+  font-size: 50px;
+}
+figure img {
+  max-width: 40%;
+  float: left;
+  margin: 0% 5% 0% 0%;
+}
+.score h1 {
+  font-size: 40px;
+  margin-top: 40px;
+}
+.final_score {
+  font-size: 40px;
 }
