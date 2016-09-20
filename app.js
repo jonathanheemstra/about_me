@@ -88,5 +88,5 @@ if (myNickName == 'yes' || myNickName == 'y') {
 //Results
 var userScore = hairColor + hometown + previousJob + favBaseballTeam + myNickName;
 console.log('User\'s final score: ' + userScore);
-alert('Your final score ' + userScore + 'out of 5');
-document.write('<h4 class="final_score">Your Score: ' + userScore + '</h4>');
+alert('Your final score ' + userScore + ' out of 5');
+document.write('<h4 class="final_score">Your Score: ' + userScore + ' out of 5</h4>');
