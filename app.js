@@ -1,15 +1,29 @@
-var userName = prompt('What would your super hero name be?');
-console.log('The user\'s super hero name is ' + userName);
-alert('Hello ' + userName + '. ');
+var job = prompt('Do you like your job?');
+console.log('Do you like your job? User\'s answer: ' + job);
+if (job == "yes") {
+  var opportunity = prompt('Do you feel like you have opportunity for growth in your career?');
+  console.log('Do you feel like you have opportunity for growth in your career? User\'s answer: ' + opportunity);
 
-var superPower = prompt('If you could have any super power what would it be?');
-console.log('The user\'s super power would be ' + superPower);
-alert('Hello ' + userName + '. '+ 'I hope you would use your super power of ' + superPower + ' for good.');
+  var switchCareers = prompt('Would you be willing to switch careers?');
+  console.log('Would you be willing to switch careers? User\'s answer: ' + switchCareers);
 
-var userCity = prompt('What mythical city would you live in?');
-console.log('The user would save the city of ' + userCity);
-alert('Hello ' + userName + '. '+ 'I hope you would use your super power of ' + superPower + ' to save ' + userCity);
+  var softDev = prompt('Have you ever considered a career in software development?');
+  console.log('Have you ever considered a career in software development? User\'s answer: ' + softDev);
 
-var nemesis = prompt('Who would be your arch nemesis?');
-console.log('The user\'s nemesis would be ' + nemesis);
-alert('Hello ' + userName + '. '+ 'I hope you would use your super power of ' + superPower + ' to save ' + userCity + ' and to defeat ' + nemesis + '!');
+  var moveSeattle = prompt('Would you be willing to move to seattle and dedicate 6 months in order to get a new career in software devleopment?');
+  console.log('Would you be willing to move to seattle and dedicate 6 months in order to get a new career in software devleopment? User\'s answer: ' + moveSeattle);
+
+} else {
+  var switchCareers = prompt('Would you be willing to switch careers?');
+  console.log('Would you be willing to switch careers? User\'s answer: ' + switchCareers);
+
+  var opportunity = prompt('Do you want a career with endless opportunities for growth?');
+  console.log('Do you want a career with endless opportunities for growth? User\'s answer: ' + opportunity)
+
+  var softDev = prompt('Have you ever considered a career in software development?');
+  console.log('Have you ever considered a career in software development? User\'s answer: ' + softDev);
+
+  var moveSeattle = prompt('Would you be willing to move to seattle and dedicate 6 months in order to get a new career in software devleopment?');
+  console.log('Would you be willing to move to seattle and dedicate 6 months in order to get a new career in software devleopment? User\'s answer: ' + moveSeattle);
+
+}
