@@ -1,8 +1,10 @@
-var job = prompt('Do you like your job?');
+"use strict";
+
+var job = prompt('Do you like your job?').toLowerCase();
 console.log('Do you like your job? User\'s answer: ' + job);
 
 if (job == "yes") {
-  var opportunity = prompt('Do you feel like you have opportunity for growth in your career?');
+  var opportunity = prompt('Do you feel like you have opportunity for growth in your career?').toLowerCase();
   console.log('Do you feel like you have opportunity for growth in your career? User\'s answer: ' + opportunity);
   if (opportunity == "yes") {
     opportunity = 1;
@@ -12,7 +14,7 @@ if (job == "yes") {
     console.log('value = ' + opportunity);
   }
 
-  var switchCareers = prompt('Would you be willing to switch careers?');
+  var switchCareers = prompt('Would you be willing to switch careers?').toLowerCase();
   console.log('Would you be willing to switch careers? User\'s answer: ' + switchCareers);
   if (switchCareers == "yes") {
     switchCareers = 1;
@@ -22,7 +24,7 @@ if (job == "yes") {
     console.log('value = ' + switchCareers);
   }
 
-  var softDev = prompt('Have you ever considered a career in software development?');
+  var softDev = prompt('Have you ever considered a career in software development?').toLowerCase();
   console.log('Have you ever considered a career in software development? User\'s answer: ' + softDev);
   if (softDev == "yes") {
     softDev = 1;
@@ -32,7 +34,7 @@ if (job == "yes") {
     console.log('value = ' + softDev);
   }
 
-  var moveSeattle = prompt('Would you be willing to move to seattle and dedicate 6 months in order to get a new career in software devleopment?');
+  var moveSeattle = prompt('Would you be willing to move to seattle and dedicate 6 months in order to get a new career in software devleopment?').toLowerCase();
   console.log('Would you be willing to move to seattle and dedicate 6 months in order to get a new career in software devleopment? User\'s answer: ' + moveSeattle);
   if (moveSeattle == "yes") {
     moveSeattle = 1;
@@ -54,7 +56,7 @@ if (job == "yes") {
     console.log('Survey result: Software Development is a growing field and there are numerous ways to learn more. Based on your answers it seems like a field you should spend more time investigating. CodeFellows is a place where you can accelerate your software development career.')
   }
 } else {
-  var switchCareers = prompt('Would you be willing to switch careers?');
+  var switchCareers = prompt('Would you be willing to switch careers?').toLowerCase();
   console.log('Would you be willing to switch careers? User\'s answer: ' + switchCareers);
   if (switchCareers == "yes") {
     switchCareers = 1;
@@ -64,7 +66,7 @@ if (job == "yes") {
     console.log('value = ' + switchCareers);
   }
 
-  var opportunity = prompt('Do you want a career with endless opportunities for growth?');
+  var opportunity = prompt('Do you want a career with endless opportunities for growth?').toLowerCase();
   console.log('Do you want a career with endless opportunities for growth? User\'s answer: ' + opportunity)
   if (opportunity == "yes") {
     opportunity = 1;
@@ -74,7 +76,7 @@ if (job == "yes") {
     console.log('value = ' + opportunity);
   }
 
-  var softDev = prompt('Have you ever considered a career in software development?');
+  var softDev = prompt('Have you ever considered a career in software development?').toLowerCase();
   console.log('Have you ever considered a career in software development? User\'s answer: ' + softDev);
   if (softDev == "yes") {
     softDev = 1;
@@ -84,7 +86,7 @@ if (job == "yes") {
     console.log('value = ' + softDev);
   }
 
-  var moveSeattle = prompt('Would you be willing to move to seattle and dedicate 6 months in order to get a new career in software devleopment?');
+  var moveSeattle = prompt('Would you be willing to move to seattle and dedicate 6 months in order to get a new career in software devleopment?').toLowerCase();
   console.log('Would you be willing to move to seattle and dedicate 6 months in order to get a new career in software devleopment? User\'s answer: ' + moveSeattle);
   if (moveSeattle == "yes") {
     moveSeattle = 1;
