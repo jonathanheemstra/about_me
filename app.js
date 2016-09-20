@@ -1,110 +1,81 @@
 "use strict";
 
-var job = prompt('Do you like your job?').toLowerCase();
-console.log('Do you like your job? User\'s answer: ' + job);
+//question 1 about my hair color
+var hairColor = prompt('Do I have blonde hair?\nPlease answer "yes" or "no"').toLowerCase();
+console.log('Do I have blonde hair? User\'s answer: ' + hairColor);
+document.write('<h2>Do I have blonde hair?</h2><br>Your answer: ' + hairColor);
 
-if (job == "yes") {
-  var opportunity = prompt('Do you feel like you have opportunity for growth in your career?').toLowerCase();
-  console.log('Do you feel like you have opportunity for growth in your career? User\'s answer: ' + opportunity);
-  if (opportunity == "yes") {
-    opportunity = 1;
-    console.log('value = ' + opportunity);
-  } else {
-    opportunity = 0;
-    console.log('value = ' + opportunity);
-  }
-
-  var switchCareers = prompt('Would you be willing to switch careers?').toLowerCase();
-  console.log('Would you be willing to switch careers? User\'s answer: ' + switchCareers);
-  if (switchCareers == "yes") {
-    switchCareers = 1;
-    console.log('value = ' + switchCareers);
-  } else {
-    switchCareers = 0;
-    console.log('value = ' + switchCareers);
-  }
-
-  var softDev = prompt('Have you ever considered a career in software development?').toLowerCase();
-  console.log('Have you ever considered a career in software development? User\'s answer: ' + softDev);
-  if (softDev == "yes") {
-    softDev = 1;
-    console.log('value = ' + softDev);
-  } else {
-    softDev = 0;
-    console.log('value = ' + softDev);
-  }
-
-  var moveSeattle = prompt('Would you be willing to move to seattle and dedicate 6 months in order to get a new career in software devleopment?').toLowerCase();
-  console.log('Would you be willing to move to seattle and dedicate 6 months in order to get a new career in software devleopment? User\'s answer: ' + moveSeattle);
-  if (moveSeattle == "yes") {
-    moveSeattle = 1;
-    console.log('value = ' + moveSeattle);
-  } else {
-    moveSeattle = 0;
-    console.log('value = ' + moveSeattle);
-  }
-
-  var surveyScore = opportunity + switchCareers + softDev + moveSeattle;
-
-  if (surveyScore >= 3) {
-    alert('Based on your it seems you are happy with your career but a career in software development is just a few short months away!');
-    console.log('User\'s total score: ' + surveyScore);
-    console.log('Survey result: Based on your it seems you are happy with your career but a career in software development is just a few short months away!')
-  } else {
-    alert('Software Development is a growing field and there are numerous ways to learn more. Based on your answers it seems like a field you should spend more time investigating. CodeFellows is a place where you can accelerate your software development career.');
-    console.log('User\'s total score: ' + surveyScore);
-    console.log('Survey result: Software Development is a growing field and there are numerous ways to learn more. Based on your answers it seems like a field you should spend more time investigating. CodeFellows is a place where you can accelerate your software development career.')
-  }
+if (hairColor == 'yes' || hairColor == 'y') {
+  alert('Correct! I have had blonde hair for my whole life. Most of my family is blonde haired as well.');
+  console.log('User\'s answer: ' + hairColor);
+} else if (hairColor == 'no' || hairColor == 'n') {
+  alert('Sorry, that\'s incorrect. You answered ' + hairColor + '\nMy hair color actually is blonde.');
+  console.log('User\'s answer: ' + hairColor);
 } else {
-  var switchCareers = prompt('Would you be willing to switch careers?').toLowerCase();
-  console.log('Would you be willing to switch careers? User\'s answer: ' + switchCareers);
-  if (switchCareers == "yes") {
-    switchCareers = 1;
-    console.log('value = ' + switchCareers);
-  } else {
-    switchCareers = 0;
-    console.log('value = ' + switchCareers);
-  }
+  alert('Please only answer questions with "yes" or "no"');
+  console.log('User answer did not contain a "yes" or "no"');
+}
 
-  var opportunity = prompt('Do you want a career with endless opportunities for growth?').toLowerCase();
-  console.log('Do you want a career with endless opportunities for growth? User\'s answer: ' + opportunity)
-  if (opportunity == "yes") {
-    opportunity = 1;
-    console.log('value = ' + opportunity);
-  } else {
-    opportunity = 0;
-    console.log('value = ' + opportunity);
-  }
+//question 2 about my hometown
+var hometown = prompt('Is my hometown Bellingham, WA?\nPlease answer "yes" or "no"').toLowerCase();
+console.log('Is my hometown Bellingham, WA? User\'s answer: ' + hometown);
+document.write('<h2>Is my hometown Bellingham, WA?</h2><br>Your answer: ' + hometown);
 
-  var softDev = prompt('Have you ever considered a career in software development?').toLowerCase();
-  console.log('Have you ever considered a career in software development? User\'s answer: ' + softDev);
-  if (softDev == "yes") {
-    softDev = 1;
-    console.log('value = ' + softDev);
-  } else {
-    softDev = 0;
-    console.log('value = ' + softDev);
-  }
+if (hometown == 'no' || hometown == 'n') {
+  alert('Correct!\nMy hometown is actually Olympia WA. I moved to Bellingham after graduating from college.');
+  console.log('User\'s answer: ' + hometown);
+} else if (hometown == 'yes' || hometown == 'y') {
+  alert('Sorry, that\'s incorrect. You answered ' + hometown + '\nMy hometown is actually Olympia WA. I moved to Bellingham after graduating from college.');
+  console.log('User\'s answer: ' + hometown);
+} else {
+  alert('Please only answer questions with "yes" or "no"');
+  console.log('User answer did not contain a "yes" or "no"');
+}
 
-  var moveSeattle = prompt('Would you be willing to move to seattle and dedicate 6 months in order to get a new career in software devleopment?').toLowerCase();
-  console.log('Would you be willing to move to seattle and dedicate 6 months in order to get a new career in software devleopment? User\'s answer: ' + moveSeattle);
-  if (moveSeattle == "yes") {
-    moveSeattle = 1;
-    console.log('value = ' + moveSeattle);
-  } else {
-    moveSeattle = 0;
-    console.log('value = ' + moveSeattle);
-  }
+//question 3 about my previous job
+var previousJob = prompt('My previous job was in construction?\nPlease answer "yes" or "no"').toLowerCase();
+console.log('My previous job was in construction? User\'s answer: ' + previousJob);
+document.write('<h2>My previous job was in construction?</h2><br>Your answer: ' + previousJob);
 
-  var surveyScore = switchCareers + opportunity + softDev + moveSeattle;
+if (previousJob == 'no' || previousJob == 'n') {
+  alert('Correct!\nMy previous job was in marketing for a software company called Faithlife.');
+  console.log('User\'s answer: ' + previousJob);
+} else if (previousJob == 'yes' || previousJob == 'y') {
+  alert('Sorry, that\'s incorrect. You answered ' + previousJob + '\nMy previous job was in marketing for a software company called Faithlife.');
+  console.log('User\'s answer: ' + previousJob);
+} else {
+  alert('Please only answer questions with "yes" or "no"');
+  console.log('User answer did not contain a "yes" or "no"');
+}
 
-  if (surveyScore >= 3) {
-    alert('Based on your answers taking classes at CodeFellows seems like the right thing for you!');
-    console.log('User\'s total score: ' + surveyScore);
-    console.log('Survey result: Based on your answers taking classes at CodeFellows seems like the right thing for you!')
-  } else {
-    alert('Software Development is a growing field and there are numerous ways to learn more. Based on your answers it seems like a field you should spend more time investigating. CodeFellows is a place where you can accelerate your software development career.');
-    console.log('User\'s total score: ' + surveyScore);
-    console.log('Survey result: Software Development is a growing field and there are numerous ways to learn more. Based on your answers it seems like a field you should spend more time investigating. CodeFellows is a place where you can accelerate your software development career.')
-  }
+//question 4 about my favorite baseball team
+var favBaseballTeam = prompt('Is my favorite baseball team the Seattle Mariners?\nPlease answer "yes" or "no"').toLowerCase();
+console.log('Is my favorite baseball team the Seattle Mariners? User\'s answer: ' + favBaseballTeam);
+document.write('<h2>Is my favorite baseball team the Seattle Mariners?</h2><br>Your answer: ' + favBaseballTeam);
+
+if (favBaseballTeam == 'yes' || favBaseballTeam == 'y') {
+  alert('Correct! I have been a huge Seattle Mariners fan since I was a little kid playing t-ball.');
+  console.log('User\'s answer: ' + favBaseballTeam);
+} else if (favBaseballTeam == 'no' || favBaseballTeam == 'n') {
+  alert('Sorry, that\'s incorrect. You answered ' + favBaseballTeam + '\nI have been a huge Seattle Mariners fan since I was a little kid playing t-ball.');
+  console.log('User\'s answer: ' + favBaseballTeam);
+} else {
+  alert('Please only answer questions with "yes" or "no"');
+  console.log('User answer did not contain a "yes" or "no"');
+}
+
+//question 5 about my nickname
+var myNickName = prompt('Is my nickname Jonny?\nPlease answer "yes" or "no"').toLowerCase();
+console.log('Is my nickname Jonny? User\'s answer: ' + myNickName);
+document.write('<h2>Is my nickname Jonny?</h2><br>Your answer: ' + myNickName);
+
+if (myNickName == 'yes' || myNickName == 'y') {
+  alert('Correct! I have gone by the nickname "Jonny" since 2nd grade.');
+  console.log('User\'s answer: ' + myNickName);
+} else if (myNickName == 'no' || myNickName == 'n') {
+  alert('Sorry, that\'s incorrect. You answered ' + myNickName + '\nI have gone by the nickname "Jonny" since 2nd grade.');
+  console.log('User\'s answer: ' + myNickName);
+} else {
+  alert('Please only answer questions with "yes" or "no"');
+  console.log('User answer did not contain a "yes" or "no"');
 }
