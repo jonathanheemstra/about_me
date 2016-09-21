@@ -95,8 +95,34 @@ if (myNickName === 'yes' || myNickName === 'y') {
   myNickName = 0;
 }
 
+//question 6 guess how many years I played baseball
+for (var i = 0; i < 4; i++) {
+  var yearsPlaying = parseFloat(prompt('How many years did I play baseball?\nPlease provide a number between 0 and 20.'));
+  var remainingGuesses = 4 - i;
+  var currentGuess = i + 1;
+    if (yearsPlaying === 12) {
+      alert('Great guess! That is correct. I played baseball for 12 years');
+      console.log('User\'s guess: ' + yearsPlaying + '\nGuessed correctly on try ' + currentGuess +' of 4');
+      yearsPlaying = 1;
+      break;
+    } else if (yearsPlaying > 12) {
+      alert('That\'s to HIGH. Guess again!\nYou have ' + (remainingGuesses -= 1) + ' more tries.');
+      console.log('User\'s guess: ' + yearsPlaying + '\nGuess ' + currentGuess +' of 4');
+      yearsPlaying = 0;
+    } else {
+      alert('That\'s to LOW. Guess again!\nYou have ' + (remainingGuesses -= 1) + ' more tries.');
+      console.log('User\'s guess: ' + yearsPlaying + '\nGuess ' + currentGuess +' of 4');
+      yearsPlaying = 0;
+    }
+}
+
+// //question 7 where have I lived
+// var favoriteThings = prompt('Can you guess one of my favorite things to do in my spare time?');
+// var myFavThings = ['backcountry skiing', 'hanging out with friends', 'hiking', 'rock climbing', 'running', 'playing board games', 'grabbing a beer', 'kayaking', 'playing video games', 'watching baseball'];
+//
+//
 //Results
-var userScore = hairColor + hometown + previousJob + favBaseballTeam + myNickName;
-console.log('User\'s final score: ' + userScore + ' out of 5');
-alert('Your final score ' + userScore + ' out of 5');
-document.write('<h4 class="final_score">Your Score: ' + userScore + ' out of 5</h4>');
+var userScore = hairColor + hometown + previousJob + favBaseballTeam + myNickName + yearsPlaying;
+console.log('User\'s final score: ' + userScore + ' out of 7');
+alert(userName + ', Your final score was' + userScore + ' out of 7.\nGood work!' );
+document.write('<h4 class="final_score">Your Score: ' + userScore + ' out of 7</h4>');

@@ -46,6 +46,7 @@ figcaption {
 .resume {
   width: 100%;
   height: 750px;
+  margin-bottom: 50px;
 }
 .resume h2 {
   font-size: 50px;
@@ -90,6 +91,20 @@ figcaption {
 .score * {
   margin-left: 5%;
   text-align: center;
+}
+.top_ten {
+  margin-right: 5%;
+  background-color: #2980B9;
+  height: 260px;
+  margin-top: 50px;
+  color: white;
+}
+.top_ten h4 {
+  padding-top: 5%;
+  margin-top: 0;
+}
+.top_ten * {
+  margin-left: 5%;
 }
 .final_score {
   font-size: 25px;
