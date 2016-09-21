@@ -3,6 +3,9 @@ body {
   max-width: 1080px;
   font-family: 'Roboto Condensed', sans-serif;
 }
+section {
+  margin-top: 3%;
+}
 .about_me {
   width: 73%;
   float: left;
@@ -14,7 +17,7 @@ body {
 .personality_type {
   width: 22%;
   float: left;
-  margin: 1.5% 0% 0% 5%;
+  margin-left: 5%;
   background-color: #E74C3C;
   color: white;
 }
@@ -26,10 +29,16 @@ body {
   text-align: center;
   padding-top: 40px;
 }
-figure img {
+figure {
   max-width: 45%;
   float: left;
   margin: 0% 5% 0% 0%;
+}
+figure img {
+  max-width: 100%;
+}
+figcaption {
+  text-align: center;
 }
 .score h1 {
   font-size: 40px;
