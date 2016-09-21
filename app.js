@@ -2,7 +2,7 @@
 
 //question 1 about my hair color
 var hairColor = prompt('Do I have blonde hair?\nPlease answer "yes" or "no"').toLowerCase();
-console.log('Do I have blonde hair? User\'s answer: ' + hairColor);
+console.log('Question: Do I have blonde hair?');
 
 if (hairColor == 'yes' || hairColor == 'y') {
   alert('Correct! I have had blonde hair for my whole life. Most of my family is blonde haired as well.');
@@ -15,11 +15,12 @@ if (hairColor == 'yes' || hairColor == 'y') {
 } else {
   alert('Please only answer questions with "yes" or "no"');
   console.log('User answer did not contain a "yes" or "no"');
+  hairColor = 0;
 }
 
 //question 2 about my hometown
 var hometown = prompt('Is my hometown Bellingham, WA?\nPlease answer "yes" or "no"').toLowerCase();
-console.log('Is my hometown Bellingham, WA? User\'s answer: ' + hometown);
+console.log('Question: Is my hometown Bellingham, WA?');
 
 if (hometown == 'no' || hometown == 'n') {
   alert('Correct!\nMy hometown is actually Olympia WA. I moved to Bellingham after graduating from college.');
@@ -32,11 +33,12 @@ if (hometown == 'no' || hometown == 'n') {
 } else {
   alert('Please only answer questions with "yes" or "no"');
   console.log('User answer did not contain a "yes" or "no"');
+  hometown = 0;
 }
 
 //question 3 about my previous job
 var previousJob = prompt('My previous job was in construction?\nPlease answer "yes" or "no"').toLowerCase();
-console.log('My previous job was in construction? User\'s answer: ' + previousJob);
+console.log('Question: My previous job was in construction?');
 
 if (previousJob == 'no' || previousJob == 'n') {
   alert('Correct!\nMy previous job was in marketing for a software company called Faithlife.');
@@ -49,11 +51,12 @@ if (previousJob == 'no' || previousJob == 'n') {
 } else {
   alert('Please only answer questions with "yes" or "no"');
   console.log('User answer did not contain a "yes" or "no"');
+  previousJob = 0;
 }
 
 //question 4 about my favorite baseball team
 var favBaseballTeam = prompt('Is my favorite baseball team the Seattle Mariners?\nPlease answer "yes" or "no"').toLowerCase();
-console.log('Is my favorite baseball team the Seattle Mariners? User\'s answer: ' + favBaseballTeam);
+console.log('Question: Is my favorite baseball team the Seattle Mariners?');
 
 if (favBaseballTeam == 'yes' || favBaseballTeam == 'y') {
   alert('Correct! I have been a huge Seattle Mariners fan since I was a little kid playing t-ball.');
@@ -66,11 +69,12 @@ if (favBaseballTeam == 'yes' || favBaseballTeam == 'y') {
 } else {
   alert('Please only answer questions with "yes" or "no"');
   console.log('User answer did not contain a "yes" or "no"');
+  favBaseballTeam = 0;
 }
 
 //question 5 about my nickname
 var myNickName = prompt('Is my nickname Jonny?\nPlease answer "yes" or "no"').toLowerCase();
-console.log('Is my nickname Jonny? User\'s answer: ' + myNickName);
+console.log('Question: Is my nickname Jonny?');
 
 if (myNickName == 'yes' || myNickName == 'y') {
   alert('Correct! I have gone by the nickname "Jonny" since 2nd grade.');
@@ -83,10 +87,11 @@ if (myNickName == 'yes' || myNickName == 'y') {
 } else {
   alert('Please only answer questions with "yes" or "no"');
   console.log('User answer did not contain a "yes" or "no"');
+  myNickName = 0;
 }
 
 //Results
 var userScore = hairColor + hometown + previousJob + favBaseballTeam + myNickName;
-console.log('User\'s final score: ' + userScore);
+console.log('User\'s final score: ' + userScore + ' out of 5');
 alert('Your final score ' + userScore + ' out of 5');
 document.write('<h4 class="final_score">Your Score: ' + userScore + ' out of 5</h4>');
