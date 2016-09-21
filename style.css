@@ -7,27 +7,20 @@ section {
   margin-top: 3%;
 }
 .about_me {
-  width: 73%;
-  float: left;
+  width: 100%;
+  height: 378px;
 }
 .about_me h1 {
   font-size: 50px;
   margin: 0px;
 }
-.personality_type {
-  width: 22%;
+.about_me h1 h3 p {
+  display: inline-block;
+  max-width: 50%;
+}
+.about_me article {
+  width: 73%;
   float: left;
-  margin-left: 5%;
-  background-color: #E74C3C;
-  color: white;
-}
-.personality_type * {
-  margin-left: 5%;
-}
-.score {
-  clear: both;
-  text-align: center;
-  padding-top: 40px;
 }
 figure {
   max-width: 45%;
@@ -40,10 +33,69 @@ figure img {
 figcaption {
   text-align: center;
 }
-.score h1 {
-  font-size: 40px;
-  display: inline;
+.personality_type {
+  width: 22%;
+  float: left;
+  margin-left: 5%;
+  background-color: #E74C3C;
+  color: white;
+}
+.personality_type * {
+  margin-left: 5%;
+}
+.resume {
+  width: 100%;
+  height: 750px;
+}
+.resume h2 {
+  font-size: 50px;
+  margin: 0px;
+}
+.experience {
+  width: 65%;
+  float: left;
+}
+.resume aside {
+  width: 30%;
+  float: left;
+  height: 450px;
+}
+.education {
+  margin-right: 5%;
+  background-color: #2C3E50;
+  color: white;
+  clear: both;
+  height: 210px;
+}
+.education h4 {
+  padding-top: 5%;
+  margin-top: 0;
+}
+.education ul {
+  padding-left: 10px;
+}
+.education * {
+  margin-left: 5%;
+}
+.score {
+  margin-right: 5%;
+  background-color: #ECF0F1;
+  height: 200px;
+  margin-top: 50px;
+}
+.score h4 {
+  padding-top: 5%;
+  margin-top: 0;
+}
+.score * {
+  margin-left: 5%;
+  text-align: center;
 }
 .final_score {
   font-size: 25px;
+}
+
+/*Add responsive styles*/
+@media (max-width: 720px) {
+
 }

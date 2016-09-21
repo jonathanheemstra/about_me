@@ -1,14 +1,19 @@
-"use strict";
+'use strict';
+
+//opening question about users name
+var userName = prompt('What is your name?');
+console.log('User\'s name: ' + userName);
+alert('Hi, ' + userName + '!\nAre you ready to play a fun guessing game?\nLet\'s get started!');
 
 //question 1 about my hair color
 var hairColor = prompt('Do I have blonde hair?\nPlease answer "yes" or "no"').toLowerCase();
 console.log('Question: Do I have blonde hair?');
 
-if (hairColor == 'yes' || hairColor == 'y') {
+if (hairColor === 'yes' || hairColor === 'y') {
   alert('Correct! I have had blonde hair for my whole life. Most of my family is blonde haired as well.');
   console.log('User\'s answer: ' + hairColor);
   hairColor = 1;
-} else if (hairColor == 'no' || hairColor == 'n') {
+} else if (hairColor === 'no' || hairColor === 'n') {
   alert('Sorry, that\'s incorrect. You answered ' + hairColor + '\nMy hair color actually is blonde.');
   console.log('User\'s answer: ' + hairColor);
   hairColor = 0;
@@ -22,11 +27,11 @@ if (hairColor == 'yes' || hairColor == 'y') {
 var hometown = prompt('Is my hometown Bellingham, WA?\nPlease answer "yes" or "no"').toLowerCase();
 console.log('Question: Is my hometown Bellingham, WA?');
 
-if (hometown == 'no' || hometown == 'n') {
+if (hometown === 'no' || hometown === 'n') {
   alert('Correct!\nMy hometown is actually Olympia WA. I moved to Bellingham after graduating from college.');
   console.log('User\'s answer: ' + hometown);
   hometown = 1;
-} else if (hometown == 'yes' || hometown == 'y') {
+} else if (hometown === 'yes' || hometown === 'y') {
   alert('Sorry, that\'s incorrect. You answered ' + hometown + '\nMy hometown is actually Olympia WA. I moved to Bellingham after graduating from college.');
   console.log('User\'s answer: ' + hometown);
   hometown = 0;
@@ -40,11 +45,11 @@ if (hometown == 'no' || hometown == 'n') {
 var previousJob = prompt('My previous job was in construction?\nPlease answer "yes" or "no"').toLowerCase();
 console.log('Question: My previous job was in construction?');
 
-if (previousJob == 'no' || previousJob == 'n') {
+if (previousJob === 'no' || previousJob === 'n') {
   alert('Correct!\nMy previous job was in marketing for a software company called Faithlife.');
   console.log('User\'s answer: ' + previousJob);
   previousJob = 1;
-} else if (previousJob == 'yes' || previousJob == 'y') {
+} else if (previousJob === 'yes' || previousJob === 'y') {
   alert('Sorry, that\'s incorrect. You answered ' + previousJob + '\nMy previous job was in marketing for a software company called Faithlife.');
   console.log('User\'s answer: ' + previousJob);
   previousJob = 0;
@@ -58,11 +63,11 @@ if (previousJob == 'no' || previousJob == 'n') {
 var favBaseballTeam = prompt('Is my favorite baseball team the Seattle Mariners?\nPlease answer "yes" or "no"').toLowerCase();
 console.log('Question: Is my favorite baseball team the Seattle Mariners?');
 
-if (favBaseballTeam == 'yes' || favBaseballTeam == 'y') {
+if (favBaseballTeam === 'yes' || favBaseballTeam === 'y') {
   alert('Correct! I have been a huge Seattle Mariners fan since I was a little kid playing t-ball.');
   console.log('User\'s answer: ' + favBaseballTeam);
   favBaseballTeam = 1;
-} else if (favBaseballTeam == 'no' || favBaseballTeam == 'n') {
+} else if (favBaseballTeam === 'no' || favBaseballTeam === 'n') {
   alert('Sorry, that\'s incorrect. You answered ' + favBaseballTeam + '\nI have been a huge Seattle Mariners fan since I was a little kid playing t-ball.');
   console.log('User\'s answer: ' + favBaseballTeam);
   favBaseballTeam = 0;
@@ -76,11 +81,11 @@ if (favBaseballTeam == 'yes' || favBaseballTeam == 'y') {
 var myNickName = prompt('Is my nickname Jonny?\nPlease answer "yes" or "no"').toLowerCase();
 console.log('Question: Is my nickname Jonny?');
 
-if (myNickName == 'yes' || myNickName == 'y') {
+if (myNickName === 'yes' || myNickName === 'y') {
   alert('Correct! I have gone by the nickname "Jonny" since 2nd grade.');
   console.log('User\'s answer: ' + myNickName);
   myNickName = 1;
-} else if (myNickName == 'no' || myNickName == 'n') {
+} else if (myNickName === 'no' || myNickName === 'n') {
   alert('Sorry, that\'s incorrect. You answered ' + myNickName + '\nI have gone by the nickname "Jonny" since 2nd grade.');
   console.log('User\'s answer: ' + myNickName);
   myNickName = 0;
