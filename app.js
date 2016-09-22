@@ -119,7 +119,7 @@ function question_6 () {
       console.log('User\'s guess: ' + yearsPlaying + '\nGuessed incorrectly on try ' + currentGuess + ' of 4');
     }
   }
-  if (yearsPlaying === 0) {
+  if (i === 4) {
     alert('Sorry, you didn\'t guess the right number. The right number was ' + randomNumber);
   }
 }
@@ -133,8 +133,8 @@ function question_7() {
     var favoriteThings = prompt('Can you guess one of my favorite things to do in my spare time?');
     favoriteThings = favoriteThings.toLowerCase();
     var foundAnswer = false;
-    remainingGuesses = 6 - a;
-    currentGuess = a + 1;
+    var remainingGuesses = 6 - a;
+    var currentGuess = a + 1;
     for (var i = 0; i < myFavoriteThings.length; i++) {
       if (myFavoriteThings[i] === favoriteThings) {
         foundAnswer = true;
@@ -151,6 +151,9 @@ function question_7() {
     }
     a++;
   }
+  if (a === 6) {
+    alert('Sorry, you didn\'t guess any of my favorite things to do. Some of my favorite things to do are ' + myFavoriteThings);
+  }
 }
 question_7 ();
 
@@ -166,3 +169,5 @@ function results (){
   }
 }
 results ();
+
+document.write('<h4 class="final_score">Your Score:<br>' + userScore + ' out of 7</h4>');
