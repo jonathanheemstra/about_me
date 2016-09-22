@@ -96,22 +96,24 @@ if (myNickName === 'yes' || myNickName === 'y') {
 }
 
 //question 6 guess how many years I played baseball
+var randomNumber = Math.floor(Math.random() * 20) + 1; //had done work with random numbers previously but had to consult http://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript to job my memory
+console.log('Random number generated for question 6: ' + randomNumber);
 for (var i = 0; i < 4; i++) {
   var yearsPlaying = parseFloat(prompt('How many years did I play baseball?\nPlease provide a number between 0 and 20.'));
   var remainingGuesses = 4 - i;
   var currentGuess = i + 1;
-  if (yearsPlaying === 12) {
-    alert('Great guess! That is correct. I played baseball for 12 years');
+  if (yearsPlaying === randomNumber) {
+    alert('Great guess! That is correct. I played baseball for ' + randomNumber + ' years');
     console.log('User\'s guess: ' + yearsPlaying + '\nGuessed correctly on try ' + currentGuess + ' of 4');
     yearsPlaying = 1;
     break;
-  } else if (yearsPlaying > 12) {
+  } else if (yearsPlaying > randomNumber) {
     alert('That\'s too HIGH. Guess again!\nYou have ' + (remainingGuesses -= 1) + ' more tries.');
     console.log('User\'s guess: ' + yearsPlaying + '\nGuessed incorrectly on try ' + currentGuess + ' of 4');
     yearsPlaying = 0;
   } else {
     alert('That\'s too LOW. Guess again!\nYou have ' + (remainingGuesses -= 1) + ' more tries.');
-    console.log('User\'s guess: ' + yearsPlaying + '\nGuessed incorrectly on try' + currentGuess + ' of 4');
+    console.log('User\'s guess: ' + yearsPlaying + '\nGuessed incorrectly on try ' + currentGuess + ' of 4');
     yearsPlaying = 0;
   }
 }
