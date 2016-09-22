@@ -107,22 +107,44 @@ for (var i = 0; i < 4; i++) {
       break;
     } else if (yearsPlaying > 12) {
       alert('That\'s to HIGH. Guess again!\nYou have ' + (remainingGuesses -= 1) + ' more tries.');
-      console.log('User\'s guess: ' + yearsPlaying + '\nGuess ' + currentGuess +' of 4');
+      console.log('User\'s guess: ' + yearsPlaying + '\nGuessed incorrectly on try ' + currentGuess +' of 4');
       yearsPlaying = 0;
     } else {
       alert('That\'s to LOW. Guess again!\nYou have ' + (remainingGuesses -= 1) + ' more tries.');
-      console.log('User\'s guess: ' + yearsPlaying + '\nGuess ' + currentGuess +' of 4');
+      console.log('User\'s guess: ' + yearsPlaying + '\nGuessed incorrectly on try' + currentGuess +' of 4');
       yearsPlaying = 0;
     }
 }
 
-// //question 7 where have I lived
-// var favoriteThings = prompt('Can you guess one of my favorite things to do in my spare time?');
-// var myFavThings = ['backcountry skiing', 'hanging out with friends', 'hiking', 'rock climbing', 'running', 'playing board games', 'grabbing a beer', 'kayaking', 'playing video games', 'watching baseball'];
-//
-//
+//question 7 where have I lived
+var myFavoriteThings = ['backcountry skiing', 'hanging out with friends', 'hiking', 'rock climbing', 'running', 'playing board games', 'watching classic sitcoms', 'kayaking', 'playing video games', 'watching baseball'];
+var a = 0
+while (a < 6) {
+  var favoriteThings = prompt('Can you guess one of my favorite things to do in my spare time?');
+  favoriteThings = favoriteThings.toLowerCase();
+  var foundAnswer = false;
+  var remainingGuesses = 6 - a;
+  var currentGuess = a + 1;
+  for (var i = 0; i < myFavoriteThings.length; i++) {
+    if (myFavoriteThings[i] === favoriteThings) {
+        foundAnswer = true;
+      }
+  }
+  if (foundAnswer === true) {
+    alert('Nicely done!\n' + favoriteThings + ' is one of my favorite things to do.');
+    console.log('User\'s guess: ' + favoriteThings + '\nGuessed correctly on try ' + currentGuess +' of 6');
+    favoriteThings = 1
+    break;
+  } else {
+    console.log('User\'s guess: ' + favoriteThings + '\nGuessed incorrectly on try ' + currentGuess +' of 6');
+    alert('You guessed incorrectly. Try again!\nYou have ' + (remainingGuesses -= 1) + ' more tries.');
+  }
+  favoriteThings = 0;
+  a++
+}
+
 //Results
-var userScore = hairColor + hometown + previousJob + favBaseballTeam + myNickName + yearsPlaying;
+var userScore = hairColor + hometown + previousJob + favBaseballTeam + myNickName + yearsPlaying + favoriteThings;
 console.log('User\'s final score: ' + userScore + ' out of 7');
-alert(userName + ', Your final score was' + userScore + ' out of 7.\nGood work!' );
+alert(userName + ', Your final score was ' + userScore + ' out of 7.\nGood work!' );
 document.write('<h4 class="final_score">Your Score: ' + userScore + ' out of 7</h4>');

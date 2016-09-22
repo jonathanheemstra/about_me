@@ -3,6 +3,9 @@ body {
   max-width: 1080px;
   font-family: 'Roboto Condensed', sans-serif;
 }
+hr {
+  margin: 25px 0px;
+}
 section {
   margin-top: 3%;
 }
@@ -59,7 +62,6 @@ figcaption {
 .resume aside {
   width: 30%;
   float: left;
-  height: 450px;
 }
 .education {
   margin-right: 5%;
@@ -82,7 +84,7 @@ figcaption {
   margin-right: 5%;
   background-color: #ECF0F1;
   height: 200px;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .score h4 {
   padding-top: 5%;
@@ -96,7 +98,7 @@ figcaption {
   margin-right: 5%;
   background-color: #2980B9;
   height: 260px;
-  margin-top: 50px;
+  margin-top: 20px;
   color: white;
 }
 .top_ten h4 {
