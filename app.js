@@ -106,11 +106,11 @@ for (var i = 0; i < 4; i++) {
     yearsPlaying = 1;
     break;
   } else if (yearsPlaying > 12) {
-    alert('That\'s to HIGH. Guess again!\nYou have ' + (remainingGuesses -= 1) + ' more tries.');
+    alert('That\'s too HIGH. Guess again!\nYou have ' + (remainingGuesses -= 1) + ' more tries.');
     console.log('User\'s guess: ' + yearsPlaying + '\nGuessed incorrectly on try ' + currentGuess + ' of 4');
     yearsPlaying = 0;
   } else {
-    alert('That\'s to LOW. Guess again!\nYou have ' + (remainingGuesses -= 1) + ' more tries.');
+    alert('That\'s too LOW. Guess again!\nYou have ' + (remainingGuesses -= 1) + ' more tries.');
     console.log('User\'s guess: ' + yearsPlaying + '\nGuessed incorrectly on try' + currentGuess + ' of 4');
     yearsPlaying = 0;
   }

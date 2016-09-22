@@ -1,116 +1,181 @@
 body {
-  margin: 0 auto;
-  max-width: 1080px;
-  font-family: 'Roboto Condensed', sans-serif;
+    margin: 0 auto;
+    max-width: 1080px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
+
 hr {
-  margin: 25px 0px;
+    margin: 25px 0px;
 }
+
 section {
-  margin-top: 3%;
+    margin-top: 3%;
 }
+
 .about_me {
-  width: 100%;
-  height: 378px;
+    width: 100%;
+    height: 378px;
 }
+
 .about_me h1 {
-  font-size: 50px;
-  margin: 0px;
+    font-size: 50px;
+    margin: 0px;
 }
+
 .about_me h1 h3 p {
-  display: inline-block;
-  max-width: 50%;
+    display: inline-block;
+    max-width: 50%;
 }
+
 .about_me article {
-  width: 73%;
-  float: left;
+    width: 73%;
+    float: left;
 }
+
 figure {
-  max-width: 45%;
-  float: left;
-  margin: 0% 5% 0% 0%;
+    max-width: 45%;
+    float: left;
+    margin: 0% 5% 0% 0%;
 }
+
 figure img {
-  max-width: 100%;
+    max-width: 100%;
 }
+
 figcaption {
-  text-align: center;
-  font-size: 12px;
-  font-style: italic;
+    text-align: center;
+    font-size: 12px;
+    font-style: italic;
 }
+
 .personality_type {
-  width: 22%;
-  float: left;
-  margin-left: 5%;
-  background-color: #E74C3C;
-  color: white;
+    width: 22%;
+    float: left;
+    margin-left: 5%;
+    background-color: #E74C3C;
+    color: white;
 }
+
 .personality_type * {
-  margin-left: 5%;
+    margin-left: 5%;
 }
+
 .resume {
-  width: 100%;
-  height: 750px;
-  margin-bottom: 50px;
+    width: 100%;
+    height: 750px;
+    margin-bottom: 50px;
 }
+
 .resume h2 {
-  font-size: 50px;
-  margin: 0px;
+    font-size: 50px;
+    margin: 0px;
 }
+
 .experience {
-  width: 65%;
-  float: left;
+    width: 65%;
+    float: left;
 }
+
 .resume aside {
-  width: 30%;
-  float: left;
+    width: 30%;
+    float: left;
 }
+
 .education {
-  margin-right: 5%;
-  background-color: #2C3E50;
-  color: white;
-  clear: both;
-  height: 210px;
+    margin-right: 5%;
+    background-color: #2C3E50;
+    color: white;
+    clear: both;
+    height: 210px;
 }
+
 .education h4 {
-  padding-top: 5%;
-  margin-top: 0;
+    padding-top: 5%;
+    margin-top: 0;
 }
+
 .education ul {
-  padding-left: 10px;
+    padding-left: 10px;
 }
+
 .education * {
-  margin-left: 5%;
+    margin-left: 5%;
 }
+
 .score {
-  margin-right: 5%;
-  background-color: #ECF0F1;
-  height: 200px;
-  margin-top: 20px;
+    margin-right: 5%;
+    background-color: #ECF0F1;
+    height: 250px;
+    margin-top: 20px;
 }
+
 .score h4 {
-  padding-top: 5%;
-  margin-top: 0;
-  margin-left: 0;
+    padding-top: 5%;
+    margin-top: 0;
+    margin-left: 0;
 }
+
 .score * {
-  margin-left: 5%;
-  text-align: center;
+    margin-left: 5%;
+    text-align: center;
 }
+
 .top_ten {
-  margin-right: 5%;
-  background-color: #2980B9;
-  height: 260px;
-  margin-top: 20px;
-  color: white;
+    margin-right: 5%;
+    background-color: #2980B9;
+    height: 260px;
+    margin-top: 20px;
+    color: white;
 }
+
 .top_ten h4 {
-  padding-top: 5%;
-  margin-top: 0;
+    padding-top: 5%;
+    margin-top: 0;
 }
+
 .top_ten * {
-  margin-left: 5%;
+    margin-left: 5%;
 }
+
 .final_score {
-  font-size: 25px;
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    border: 1px;
+    padding: 20px;
+    text-align: center;
+    margin-right: 20px;
+    float: left;
+    font-weight: bold;
+    width: 40%;
+    margin: 0% 23%;
+}
+
+.flat {
+    border-radius: 5px;
+    background-color: #E74C3C;
+    color: white;
+    border-bottom: 5px solid #A6372B;
+    border-right: 3px solid #A6372B;
+}
+
+.flat:hover {
+    background: #A6372B;
+    border-bottom: 3px solid #7F2A21;
+    border-right: 2px solid #7F2A21;
+    margin-top: 2px;
+    margin-right: 21px;
+}
+
+.flat:active {
+    background: #A6372B;
+    border-bottom: 0px;
+    border-right: 0px;
+    margin-top: 5px;
+    margin-right: 23px;
 }
