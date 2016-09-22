@@ -96,7 +96,7 @@ if (myNickName === 'yes' || myNickName === 'y') {
 }
 
 //question 6 guess how many years I played baseball
-var randomNumber = Math.floor(Math.random() * 20) + 1; //had done work with random numbers previously but had to consult http://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript to job my memory
+var randomNumber = Math.floor(Math.random() * 20) + 1; //had done work with random numbers previously but had to consult http://stackoverflow.com/questions/4959975/generate-random-number-between-two-numbers-in-javascript to jog my memory
 console.log('Random number generated for question 6: ' + randomNumber);
 for (var i = 0; i < 4; i++) {
   var yearsPlaying = parseFloat(prompt('How many years did I play baseball?\nPlease provide a number between 0 and 20.'));
@@ -117,6 +117,9 @@ for (var i = 0; i < 4; i++) {
     yearsPlaying = 0;
   }
 }
+if (yearsPlaying === 0) {
+  alert('Sorry, you didn\'t guess the right number. The right number was ' + randomNumber);
+}
 
 //question 7 where have I lived
 var myFavoriteThings = ['backcountry skiing', 'hanging out with friends', 'hiking', 'rock climbing', 'running', 'playing board games', 'watching classic sitcoms', 'kayaking', 'playing video games', 'watching baseball'];
@@ -127,7 +130,7 @@ while (a < 6) {
   var foundAnswer = false;
   remainingGuesses = 6 - a;
   currentGuess = a + 1;
-  for (i = 0; i < myFavoriteThings.length; i++) {
+  for (var i = 0; i < myFavoriteThings.length; i++) {
     if (myFavoriteThings[i] === favoriteThings) {
       foundAnswer = true;
     }
