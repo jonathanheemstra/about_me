@@ -1,2 +1,3 @@
 # about_me
-About Me Project for Code 201, September 2016
+pair driving lab
+regenal driver Big Jon Nav
