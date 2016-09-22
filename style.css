@@ -35,6 +35,8 @@ figure img {
 }
 figcaption {
   text-align: center;
+  font-size: 12px;
+  font-style: italic;
 }
 .personality_type {
   width: 22%;
@@ -89,6 +91,7 @@ figcaption {
 .score h4 {
   padding-top: 5%;
   margin-top: 0;
+  margin-left: 0;
 }
 .score * {
   margin-left: 5%;
@@ -110,9 +113,4 @@ figcaption {
 }
 .final_score {
   font-size: 25px;
-}
-
-/*Add responsive styles*/
-@media (max-width: 720px) {
-
 }

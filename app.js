@@ -100,51 +100,57 @@ for (var i = 0; i < 4; i++) {
   var yearsPlaying = parseFloat(prompt('How many years did I play baseball?\nPlease provide a number between 0 and 20.'));
   var remainingGuesses = 4 - i;
   var currentGuess = i + 1;
-    if (yearsPlaying === 12) {
-      alert('Great guess! That is correct. I played baseball for 12 years');
-      console.log('User\'s guess: ' + yearsPlaying + '\nGuessed correctly on try ' + currentGuess +' of 4');
-      yearsPlaying = 1;
-      break;
-    } else if (yearsPlaying > 12) {
-      alert('That\'s to HIGH. Guess again!\nYou have ' + (remainingGuesses -= 1) + ' more tries.');
-      console.log('User\'s guess: ' + yearsPlaying + '\nGuessed incorrectly on try ' + currentGuess +' of 4');
-      yearsPlaying = 0;
-    } else {
-      alert('That\'s to LOW. Guess again!\nYou have ' + (remainingGuesses -= 1) + ' more tries.');
-      console.log('User\'s guess: ' + yearsPlaying + '\nGuessed incorrectly on try' + currentGuess +' of 4');
-      yearsPlaying = 0;
-    }
+  if (yearsPlaying === 12) {
+    alert('Great guess! That is correct. I played baseball for 12 years');
+    console.log('User\'s guess: ' + yearsPlaying + '\nGuessed correctly on try ' + currentGuess + ' of 4');
+    yearsPlaying = 1;
+    break;
+  } else if (yearsPlaying > 12) {
+    alert('That\'s to HIGH. Guess again!\nYou have ' + (remainingGuesses -= 1) + ' more tries.');
+    console.log('User\'s guess: ' + yearsPlaying + '\nGuessed incorrectly on try ' + currentGuess + ' of 4');
+    yearsPlaying = 0;
+  } else {
+    alert('That\'s to LOW. Guess again!\nYou have ' + (remainingGuesses -= 1) + ' more tries.');
+    console.log('User\'s guess: ' + yearsPlaying + '\nGuessed incorrectly on try' + currentGuess + ' of 4');
+    yearsPlaying = 0;
+  }
 }
 
 //question 7 where have I lived
 var myFavoriteThings = ['backcountry skiing', 'hanging out with friends', 'hiking', 'rock climbing', 'running', 'playing board games', 'watching classic sitcoms', 'kayaking', 'playing video games', 'watching baseball'];
-var a = 0
+var a = 0;
 while (a < 6) {
   var favoriteThings = prompt('Can you guess one of my favorite things to do in my spare time?');
   favoriteThings = favoriteThings.toLowerCase();
   var foundAnswer = false;
-  var remainingGuesses = 6 - a;
-  var currentGuess = a + 1;
-  for (var i = 0; i < myFavoriteThings.length; i++) {
+  remainingGuesses = 6 - a;
+  currentGuess = a + 1;
+  for (i = 0; i < myFavoriteThings.length; i++) {
     if (myFavoriteThings[i] === favoriteThings) {
-        foundAnswer = true;
-      }
+      foundAnswer = true;
+    }
   }
   if (foundAnswer === true) {
     alert('Nicely done!\n' + favoriteThings + ' is one of my favorite things to do.');
-    console.log('User\'s guess: ' + favoriteThings + '\nGuessed correctly on try ' + currentGuess +' of 6');
-    favoriteThings = 1
+    console.log('User\'s guess: ' + favoriteThings + '\nGuessed correctly on try ' + currentGuess + ' of 6');
+    favoriteThings = 1;
     break;
   } else {
-    console.log('User\'s guess: ' + favoriteThings + '\nGuessed incorrectly on try ' + currentGuess +' of 6');
+    console.log('User\'s guess: ' + favoriteThings + '\nGuessed incorrectly on try ' + currentGuess + ' of 6');
     alert('You guessed incorrectly. Try again!\nYou have ' + (remainingGuesses -= 1) + ' more tries.');
   }
   favoriteThings = 0;
-  a++
+  a++;
 }
 
 //Results
 var userScore = hairColor + hometown + previousJob + favBaseballTeam + myNickName + yearsPlaying + favoriteThings;
 console.log('User\'s final score: ' + userScore + ' out of 7');
-alert(userName + ', Your final score was ' + userScore + ' out of 7.\nGood work!' );
-document.write('<h4 class="final_score">Your Score: ' + userScore + ' out of 7</h4>');
+if (userScore >= 6) {
+  alert(userName + ', Your final score was ' + userScore + ' out of 7.\nGood work! You really know me well or are really good at guessing.' );
+} else if (userScore >= 4) {
+  alert(userName + ', Your final score was ' + userScore + ' out of 7.\nGood work! You seem to know a bit about me.');
+} else {
+  alert(userName + ', Your final score was ' + userScore + ' out of 7.\nI think we should hangout sometime because you don\'t know very much about me');
+}
+document.write('<h4 class="final_score">Your Score:<br>' + userScore + ' out of 7</h4>');
