@@ -121,7 +121,7 @@ if (yearsPlaying === 0) {
   alert('Sorry, you didn\'t guess the right number. The right number was ' + randomNumber);
 }
 
-//question 7 where have I lived
+//question 7 what are my favorite things
 var myFavoriteThings = ['backcountry skiing', 'hanging out with friends', 'hiking', 'rock climbing', 'running', 'playing board games', 'watching classic sitcoms', 'kayaking', 'playing video games', 'watching baseball'];
 var a = 0;
 while (a < 6) {
