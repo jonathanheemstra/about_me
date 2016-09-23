@@ -2,10 +2,11 @@
 
 var userScore = 0;
 //opening question about users name
-
-var userName = prompt('What is your name?');
-console.log('User\'s name: ' + userName);
-alert('Hi, ' + userName + '!\nAre you ready to play a fun guessing game?\nLet\'s get started!');
+function provideName() {
+  var userName = prompt('What is your name?');
+  console.log('User\'s name: ' + userName);
+  alert('Hi, ' + userName + '!\nAre you ready to play a fun guessing game?\nLet\'s get started!');
+}
 
 //question 1 about my hair color
 function question_1() {
@@ -163,6 +164,7 @@ function results(){
   document.write('<h4 class="final_score">Your Score:<br>' + userScore + ' out of 7</h4>');
 }
 
+provideName();
 question_1();
 question_2();
 question_3();
