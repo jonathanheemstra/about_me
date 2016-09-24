@@ -8,11 +8,18 @@ var yesNoQuestions = [
   'Is my nickname Jonny?\nPlease answer "yes" or "no"'
 ];
 var yesNoAnswers = [
-  'y' || 'yes',
-  'n' || 'no',
-  'n' || 'no',
-  'y' || 'yes',
-  'y' || 'yes'
+  ['y', 'yes'],
+  ['n', 'no'],
+  ['n', 'no'],
+  ['y', 'yes'],
+  ['y', 'yes']
+];
+var oppositeAnswers = [
+  ['n', 'no'],
+  ['y', 'yes'],
+  ['y', 'yes'],
+  ['n', 'no'],
+  ['n', 'no'],
 ];
 var yesNoAnswersCorrect = [
   'Correct! I have had blonde hair for my whole life. Most of my family is blonde haired as well.',
@@ -46,16 +53,16 @@ function askYesNoQuestions() {
     var userAnswer = prompt(yesNoQuestions[i]).toLowerCase();
     console.log(yesNoQuestions[i]);
     console.log(userAnswer);
-    if (userAnswer === yesNoAnswers[i]) {
+    if (userAnswer === yesNoAnswers[i][0] || userAnswer === yesNoAnswers[i][1]) {
       alert(yesNoAnswersCorrect[i]);
       console.log('User\'s answer: ' + userAnswer);
       userScore += 1;
-    } else if (userAnswer !== yesNoAnswers[i]) {
+    } else if (userAnswer === oppositeAnswers[i][0] || userAnswer === oppositeAnswers[i][1]) {
+      alert(yesNoAnswersIncorrect[i]);
+      console.log('User\'s answer: ' + userAnswer);
+    } else {
       alert(nonYesNoResponse);
       console.log('User answer did not contain a "yes" or "no"');
-    } else {
-      alert(yesNoAnswersIncorrect);
-      console.log('User\'s answer: ' + userAnswer);
     }
   }
 }
