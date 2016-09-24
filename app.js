@@ -1,5 +1,43 @@
 'use strict';
 
+var yesNoQuestions = [
+  'Do I have blonde hair?\nPlease answer "yes" or "no"',
+  'Is my hometown Bellingham, WA?\nPlease answer "yes" or "no"',
+  'My previous job was in construction?\nPlease answer "yes" or "no"',
+  'Is my favorite baseball team the Seattle Mariners?\nPlease answer "yes" or "no"',
+  'Is my nickname Jonny?\nPlease answer "yes" or "no"'
+];
+var yesNoAnswers = [
+  ['y', 'yes'],
+  ['n', 'no'],
+  ['n', 'no'],
+  ['y', 'yes'],
+  ['y', 'yes']
+];
+var oppositeAnswers = [
+  ['n', 'no'],
+  ['y', 'yes'],
+  ['y', 'yes'],
+  ['n', 'no'],
+  ['n', 'no'],
+];
+var yesNoAnswersCorrect = [
+  'Correct! I have had blonde hair for my whole life. Most of my family is blonde haired as well.',
+  'Correct!\nMy hometown is actually Olympia WA. I moved to Bellingham after graduating from college.',
+  'Correct!\nMy previous job was in marketing for a software company called Faithlife.',
+  'Correct! I have been a huge Seattle Mariners fan since I was a little kid playing t-ball.',
+  'Correct! I have gone by the nickname "Jonny" since 2nd grade.'
+];
+var userAnswer;
+var yesNoAnswersIncorrect = [
+  'Sorry, that\'s incorrect. You answered ' + userAnswer + '\nMy hair color actually is blonde.',
+  'Sorry, that\'s incorrect. You answered ' + userAnswer + '\nMy hometown is actually Olympia WA. I moved to Bellingham after graduating from college.',
+  'Sorry, that\'s incorrect. You answered ' + userAnswer + '\nMy previous job was in marketing for a software company called Faithlife.',
+  'Sorry, that\'s incorrect. You answered ' + userAnswer + '\nI have been a huge Seattle Mariners fan since I was a little kid playing t-ball.',
+  'Sorry, that\'s incorrect. You answered ' + userAnswer + '\nI have gone by the nickname "Jonny" since 2nd grade.'
+];
+var nonYesNoResponse = 'Please only answer questions with "yes" or "no"';
+
 var userScore = 0;
 
 //opening question about users name
@@ -10,89 +48,22 @@ function provideName() {
   return userName;
 }
 
-//question 1 about my hair color
-function question_1() {
-  var hairColor = prompt('Do I have blonde hair?\nPlease answer "yes" or "no"').toLowerCase();
-  console.log('Question: Do I have blonde hair?');
-  if (hairColor === 'yes' || hairColor === 'y') {
-    alert('Correct! I have had blonde hair for my whole life. Most of my family is blonde haired as well.');
-    console.log('User\'s answer: ' + hairColor);
-    userScore += 1;
-  } else if (hairColor === 'no' || hairColor === 'n') {
-    alert('Sorry, that\'s incorrect. You answered ' + hairColor + '\nMy hair color actually is blonde.');
-    console.log('User\'s answer: ' + hairColor);
-
-  } else {
-    alert('Please only answer questions with "yes" or "no"');
-    console.log('User answer did not contain a "yes" or "no"');
-  }
-}
-
-//question 2 about my hometown
-function question_2() {
-  var hometown = prompt('Is my hometown Bellingham, WA?\nPlease answer "yes" or "no"').toLowerCase();
-  console.log('Question: Is my hometown Bellingham, WA?');
-  if (hometown === 'no' || hometown === 'n') {
-    alert('Correct!\nMy hometown is actually Olympia WA. I moved to Bellingham after graduating from college.');
-    console.log('User\'s answer: ' + hometown);
-    userScore += 1;
-  } else if (hometown === 'yes' || hometown === 'y') {
-    alert('Sorry, that\'s incorrect. You answered ' + hometown + '\nMy hometown is actually Olympia WA. I moved to Bellingham after graduating from college.');
-    console.log('User\'s answer: ' + hometown);
-  } else {
-    alert('Please only answer questions with "yes" or "no"');
-    console.log('User answer did not contain a "yes" or "no"');
-  }
-}
-
-//question 3 about my previous job
-function question_3() {
-  var previousJob = prompt('My previous job was in construction?\nPlease answer "yes" or "no"').toLowerCase();
-  console.log('Question: My previous job was in construction?');
-  if (previousJob === 'no' || previousJob === 'n') {
-    alert('Correct!\nMy previous job was in marketing for a software company called Faithlife.');
-    console.log('User\'s answer: ' + previousJob);
-    userScore += 1;
-  } else if (previousJob === 'yes' || previousJob === 'y') {
-    alert('Sorry, that\'s incorrect. You answered ' + previousJob + '\nMy previous job was in marketing for a software company called Faithlife.');
-    console.log('User\'s answer: ' + previousJob);
-  } else {
-    alert('Please only answer questions with "yes" or "no"');
-    console.log('User answer did not contain a "yes" or "no"');
-  }
-}
-
-//question 4 about my favorite baseball team
-function question_4() {
-  var favBaseballTeam = prompt('Is my favorite baseball team the Seattle Mariners?\nPlease answer "yes" or "no"').toLowerCase();
-  console.log('Question: Is my favorite baseball team the Seattle Mariners?');
-  if (favBaseballTeam === 'yes' || favBaseballTeam === 'y') {
-    alert('Correct! I have been a huge Seattle Mariners fan since I was a little kid playing t-ball.');
-    console.log('User\'s answer: ' + favBaseballTeam);
-    userScore += 1;
-  } else if (favBaseballTeam === 'no' || favBaseballTeam === 'n') {
-    alert('Sorry, that\'s incorrect. You answered ' + favBaseballTeam + '\nI have been a huge Seattle Mariners fan since I was a little kid playing t-ball.');
-    console.log('User\'s answer: ' + favBaseballTeam);
-  } else {
-    alert('Please only answer questions with "yes" or "no"');
-    console.log('User answer did not contain a "yes" or "no"');
-  }
-}
-
-//question 5 about my nickname
-function question_5() {
-  var myNickName = prompt('Is my nickname Jonny?\nPlease answer "yes" or "no"').toLowerCase();
-  console.log('Question: Is my nickname Jonny?');
-  if (myNickName === 'yes' || myNickName === 'y') {
-    alert('Correct! I have gone by the nickname "Jonny" since 2nd grade.');
-    console.log('User\'s answer: ' + myNickName);
-    userScore += 1;
-  } else if (myNickName === 'no' || myNickName === 'n') {
-    alert('Sorry, that\'s incorrect. You answered ' + myNickName + '\nI have gone by the nickname "Jonny" since 2nd grade.');
-    console.log('User\'s answer: ' + myNickName);
-  } else {
-    alert('Please only answer questions with "yes" or "no"');
-    console.log('User answer did not contain a "yes" or "no"');
+function askYesNoQuestions() {
+  for (var i = 0; i < yesNoQuestions.length; i++) {
+    var userAnswer = prompt(yesNoQuestions[i]).toLowerCase();
+    console.log(yesNoQuestions[i]);
+    console.log(userAnswer);
+    if (userAnswer === yesNoAnswers[i][0] || userAnswer === yesNoAnswers[i][1]) {
+      alert(yesNoAnswersCorrect[i]);
+      console.log('User\'s answer: ' + userAnswer);
+      userScore += 1;
+    } else if (userAnswer === oppositeAnswers[i][0] || userAnswer === oppositeAnswers[i][1]) {
+      alert(yesNoAnswersIncorrect[i]);
+      console.log('User\'s answer: ' + userAnswer);
+    } else {
+      alert(nonYesNoResponse);
+      console.log('User answer did not contain a "yes" or "no"');
+    }
   }
 }
 
@@ -167,11 +138,7 @@ function results(){
 }
 
 var userName = provideName();
-question_1();
-question_2();
-question_3();
-question_4();
-question_5();
+askYesNoQuestions();
 question_6();
 question_7();
 results();
